@@ -1,0 +1,16 @@
+.hero-unit {
+    background-color: #eeeeee;
+    border-radius: 6px;
+    color: inherit;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+.hidden {
+    display: none;
+}
+input, textarea, .uneditable-input {
+    width: 506px;
+}

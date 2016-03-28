@@ -1,0 +1,41 @@
+   <script type="text/javascript">
+$("#submit_feed").click(function() {
+  var comment = $('#comment').val();
+  var points = $('#input_ran').val();
+  var email = $('#email').val();
+    $.ajax({
+        type: "POST",
+        url: "/feed",
+        data: {'comment': comment,'points': points, 'email':email},
+        cache: false
+    });
+clear_fields();
+    });
+
+$("#reset_feed").click(function() {
+  clear_fields();
+     }); 
+function clear_fields()
+{
+  $('#comment').val("");
+  $('#input_ran').val("");
+  $('#email').val("");
+}
+  </script>
+	<div class="span12" >
+  <h3>Please complete the Form Below</h3>
+  <form role="form" id="row6_form">
+    <div class="form-group">
+      <label for="comment">Comment:</label>
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+       <label for="points">Rating:</label>
+       <input type="range" name="points" id="points" min="0" max="10" onchange="show_range(this.value);">
+       <input type="text" id="input_ran" placeholder="Move the Slider" value="">
+       <label for="points">Your Email id:</label>
+       <input type="text" id="email" placeholder="someone@somemail.com">
+       <br><br>
+       <button type="button" class="btn btn-primary" id="reset_feed">Reset</button>
+       <button type="button" class="btn btn-success" id="submit_feed">Submit</button>
+    </div>
+  </form>
+	</div>

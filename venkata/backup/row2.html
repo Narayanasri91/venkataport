@@ -1,0 +1,88 @@
+	<div class="span12" >
+		<h3>
+			Please select a Question from the list
+			<br><br>
+ <div class="form-group">
+  <select id="sel1">
+    <option value="que1">Tell me about Yourself</option>
+    <option value="que2">Why should i hire you</option>
+    <option value="que3">How many years of experience do you have</option>
+    <option value="que4">How should i contact you</option>
+  </select> <button type="button" class="btn btn-success" id="answer_this" onclick="remove_entry()">Answer</button>
+</div>
+
+
+	</h3>
+	<div id="que1" class="well" style="display:none">
+  <h3>Tell me about Yourself</h3>
+  <div>
+    <p>
+    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+    </p>
+  </div>
+	</div>
+
+	<div id="que2" class="well" style="display:none">
+  <h3>Why should i hire you</h3>
+  <div>
+    <p>
+    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+    </p>
+  </div>
+	</div>
+
+		<div id="que3" class="well" style="display:none">
+  <h3>How many years of experience do you have</h3>
+  <div>
+    <p>
+    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+    </p>
+  </div>
+	</div>
+
+		<div id="que4" class="well" style="display:none">
+  <h3>How should i contact you</h3>
+  <div>
+    <p>
+    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+    </p>
+  </div>
+	</div>
+
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">New Question</button>
+ <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Please Enter Your Question and Email Here</h4>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control" placeholder="Your Question"id="usr">
+          <input type="text" class="form-control" placeholder="someone@somemail.com" id="usr">
+        </div>
+        <div class="modal-footer">
+        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+	</div>

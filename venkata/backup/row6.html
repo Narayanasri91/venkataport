@@ -1,0 +1,17 @@
+	<div class="span12" >
+  <h3>Please complete the Form Below</h3>
+  <form role="form" id="row6_form">
+    <div class="form-group">
+      <label for="comment">Comment:</label>
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+       <label for="points">Rating:</label>
+       <input type="range" name="points" id="points" min="0" max="10" onchange="show_range(this.value);">
+       <input type="text" id="input_ran" value="">
+       <label for="points">Your Email id:</label>
+       <input type="text" placeholder="someone@somemail.com">
+       <br><br>
+       <button type="button" class="btn btn-primary" id="reset">Reset</button>
+       <button type="button" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+	</div>

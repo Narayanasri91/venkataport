@@ -1,0 +1,50 @@
+	 <script type="text/javascript">
+$("#submit_info").click(function() {
+  var message = $('#comment').val();
+  var contact = $('#email1').val();
+    $.ajax({
+        type: "POST",
+        url: "/submit",
+        data: {'question': message,'email': contact},
+        cache: false
+    });
+clear_fields();
+    });
+
+$("#reset").click(function() {
+  clear_fields();
+     }); 
+function clear_fields()
+{
+      $('#comment').val("");
+    $('#email1').val("");
+}
+  </script>
+  <div class="span12" >
+  <h3>Send a Mail</h3>
+  <form role="form" id="row6_form">
+    <div class="form-group">
+      <label for="comment">To: <b>Venkata Naveen Reddy , Seelam</b></label>
+      <label for="comment">Mail:</label>
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+       <label for="points">Your Email id:</label>
+       <input type="text" id="email1" placeholder="someone@somemail.com">
+       <br><br>
+       <button type="button" class="btn btn-primary" id="reset">Reset</button>
+       <button type="button" class="btn btn-success" id="submit_info">Submit</button>
+    </div>
+    <br><br>
+        <div class="span6 well">
+          <h3>Contact Info</h3>
+          <b>
+          <p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> (513)-306-9038</p>
+          <p>Mail : seelamy@mail.uc.edu</p>
+          <p>Mail : naveen.svnr@gmail.com</p></b>
+    </div>
+  </form>
+  <div class="container-fluid">
+  <div class="row-fluid">
+
+  </div>
+</div>
+	</div>

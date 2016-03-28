@@ -1,0 +1,4 @@
+update content in the front page and buttons
+update projects page and github button
+upload code in github
+update skills section
