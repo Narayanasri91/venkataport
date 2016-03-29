@@ -4,21 +4,52 @@ $("li[id$='link']").click(function() {
     $('#row1nav > li').removeClass('active');
     $(this).addClass('active');  
     });
+    function hide_all() {
+    $("#row2").hide();
+    $("#row1").hide();
+    $("#row4").hide();
+    $("#row3").hide();
+    $("#row5").hide();
+    $("#row6").hide();
+    }
+    function make_active(name)
+    {
+    $('.navbar-inner .nav > li').removeClass('active');
+    $('#'+name).addClass('active');  
+    }
+$("#certmore").click(function() {
+    make_active("cert");
+    hide_all();
+    $("#row3").show();
+     $("#row3").load("html/row3.html");
+    });
+$("#techmore").click(function() {
+    make_active("cert");
+    hide_all();
+    $("#row3").show();
+     $("#row3").load("html/row3.html");
+    });
 
+$("#projmore").click(function() {
+    make_active("proj");
+    hide_all();
+    $("#row2").show();
+     $("#row2").load("html/row2.html");
+    });
 </script>
 <div class="span3" >
 <ul class="nav nav-list" id="row1nav" style="position: fixed;border: 1px solid;border-radius: 15px 30px 30px 5px;">
     <li class="nav-header" style="font-size: 13px;">My Profile</li>
     <li class="active" id="onelink"><a href="#">Home</a></li>
-    <li id="twolink"><a href="#portfolio3">Education</a></li>
-    <li id="threelink"><a href="#portfolio4">Experience</a></li>
-    <li id="fourlink"><a href="#portfolio5">Skills</a></li>
-    <li id="fivelink"><a href="#">Achievement</a></li>
-    <li id="sixlink"><a href="#">Google</a></li>
-    <li id="sevenlink"><a href="#">Yahoo!</a></li>
-    <li id="eightlink"><a href="#">Bing</a></li>
-    <li id="ninelink"><a href="#">Microsoft</a></li>
-    <li id="tenlink"><a href="#">Gadgetic World</a></li>
+    <li id="twolink"><a href="#">Education</a></li>
+    <li id="threelink"><a href="#portfolio1">Experience</a></li>
+    <li id="threelink"><a href="#portfolio2">Skills</a></li>
+    <li id="fourlink"><a href="#portfolio3">Certifications</a></li>
+    <li id="fivelink"><a href="#portfolio4">Projects</a></li>
+    <li id="sixlink"><a href="#portfolio5">Awards</a></li>
+    <li id="sevenlink"><a href="#portfolio6">Volunteer</a></li>
+    <li id="eightlink"><a href="#portfolio7">Contact</a></li>
+
 </ul>
 </div>
 <div id="span81"class="span9">
@@ -38,7 +69,7 @@ Hello... <br>I am <b> Venkata Naveen Reddy, Seelam </b> Currently doing my maste
     <div class="panel-heading"> <h3>Education 
         <a href="/html/docs/Venkata_Seelam_Resume.pdf" target="_blank">
         <button type="button"class="btn btn-success" style="float:right;">View Pdf</button></a>
-        <button type="button" class="btn btn-primary" style="float:right;margin-right: 10px;">More</button></h3></div>
+        </h3></div>
     <div class="panel-body">
 
                 <p><b>Master of Engineering – Computer Science </b> <br>
@@ -51,7 +82,11 @@ Hello... <br>I am <b> Venkata Naveen Reddy, Seelam </b> Currently doing my maste
 
 <section id="portfolio2">
 <div class="panel panel-default">
-    <div class="panel-heading"> <h3>Work Experience </h3></div>
+    <div class="panel-heading"> <h3>Work Experience
+<a href="/html/docs/Venkata_Seelam_Resume.pdf" target="_blank">
+        <button type="button"class="btn btn-success" style="float:right;">View Pdf</button></a>
+
+     </h3></div>
     <div class="panel-body">
         <p>
             <b>Tata Consultancy Services– Web Developer</b><br>
@@ -82,40 +117,103 @@ Hello... <br>I am <b> Venkata Naveen Reddy, Seelam </b> Currently doing my maste
 
 <section id="portfolio3">
 <div class="panel panel-default">
-    <div class="panel-heading"> <h3>Technical Skills </h3></div>
-    <div class="panel-body"><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p></div>
+    <div class="panel-heading"> <h3>Technical Skills 
+
+<a href="/html/docs/Venkata_Seelam_Resume.pdf" target="_blank">
+        <button type="button"class="btn btn-success" style="float:right;">View Pdf</button></a>
+        <button type="button" class="btn btn-primary" style="float:right;margin-right: 10px;" id="techmore">More</button>
+    </h3></div>
+    <div class="panel-body"><p>
+
+<b>Programming Languages: </b> C, C++, Java, Python, Perl, Advanced Java (JSP’s, Servlets)<br>
+<b>Web Technologies:   </b>        HTML, XML, CSS, JavaScript, JQuery, AJAX, AngularJS, Xpath, ASP .Net<br>
+<b>Databases:  </b>        Oracle10g, DB2 9, Cassandra, SQL Server<br>
+<b>Servers:   </b>         Apache tomcat, WebSphere, Jboss<br>
+<b>Framework’s:  </b>          Django, Twitter bootstrap<br>
+<b>Operating Systems: </b>     Windows 10/8/7/Vista/XP/98, MS-DOS, UNIX, Ubuntu<br>
+<b>Tools: </b> MS Office (Word, Excel, Outlook, PowerPoint), RFT, Visual paradigm, Microsoft Visual Studio, Visual Basic, Eclipse IDE, NetBeans, GIT, JIRA, RAD, Selenium, Amazon AWS, Adobe Photoshop<br>
+ </p>
+
+
+    </p></div>
 </div>
 
 <section id="portfolio4">
 <div class="panel panel-default">
-    <div class="panel-heading"> <h3>Projects </h3></div>
+    <div class="panel-heading"> <h3>Certifications
+<a href="/html/docs/Venkata_Seelam_Resume.pdf" target="_blank">
+        <button type="button"class="btn btn-success" style="float:right;">View Pdf</button></a>
+        <button type="button" class="btn btn-primary" style="float:right;margin-right: 10px;" id="certmore">More</button>
+
+    </h3></div>
     <div class="panel-body">
 
-        <p><b>Master of Engineering – Computer Science </b> <br>
-University of Cincinnati CEAS, Cincinnati, OH      <br><br>          
-<b> Bachelor of Technology- Computer Science Engineering </b>  <br>                      
-Jawaharlal Technological University, Kakinada, India                                    </p>
+        <p>
+            Oracle Certified Professional Java SE 6 Programmer</br>
+             ISTQB Certified Tester </br>
+              IBM Certified Database Associate</br>
+             IBM Certified Solution Designer</br>
+              IBM Certified Deployment Professional</br>
+              IBM Certified Associate Developer</br>
+              IBM Certified Solution Developer</br>
+        </p>
 
     </div>
 </div>
 
 <section id="portfolio5">
 <div class="panel panel-default">
-    <div class="panel-heading"> <h3>Achievements </h3></div>
-    <div class="panel-body"><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p></div>
+    <div class="panel-heading"> <h3>Projects 
+<a href="/html/docs/Venkata_Seelam_Resume.pdf" target="_blank">
+        <button type="button"class="btn btn-success" style="float:right;">View Pdf</button></a>
+        <button type="button" class="btn btn-primary" style="float:right;margin-right: 10px;" id="projmore">More</button>
+
+    </h3></div>
+    <div class="panel-body">
+        <p>
+            Blackberry Automation Team<br>
+            Blackberry Development Team<br>
+            Restaurant Billing System<br>
+            TCS Internal project<br>
+            Online College Magazine(IBM The great mind challenge)<br>
+            Employment generation system<br>
+        </p>
+    </div>
 </div>
 
 <section id="portfolio6">
 <div class="panel panel-default">
     <div class="panel-heading"> <h3>Awards and Honors </h3></div>
-    <div class="panel-body"><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p></div>
+    <div class="panel-body">
+        <p>
+            University Graduate Scholarship (UGS)<br>
+            Star of the Team Award<br>
+            Class Representative<br>
+            Prime Minister Merit Scholarship<br>
+        </p>
+    </div>
 </div>
 
 <section id="portfolio7">
 <div class="panel panel-default">
-    <div class="panel-heading"> <h3>Contact </h3></div>
-    <div class="panel-body"><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p></div>
+    <div class="panel-heading"> <h3>Volunteer Experience & Causes </h3></div>
+    <div class="panel-body">
+        <p>
+            Fire Warden (Emergency Rescue Team)<br>
+            Organizing Member<br>
+            Student Volunteer<br>
+            Prime Minister Merit Scholarship<br>
+        </p>
+    </div>
 </div>
 
- 
+<section id="portfolio8">
+         <div class="well">
+          <h3>Contact Info</h3>
+          <b>
+          <p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> (513)-306-9038</p>
+          <p>Mail : seelamy@mail.uc.edu</p>
+          <p>Mail : naveen.svnr@gmail.com</p></b>
+    </div>
+
 </div>
